@@ -156,3 +156,11 @@ export const GRADES = [
 export const generateId = (): string => {
   return Date.now().toString(36) + Math.random().toString(36).substr(2);
 };
+
+// Clear all data
+export const clearAllData = (): void => {
+  localStorage.removeItem(USERS_KEY);
+  localStorage.removeItem(EXAMS_KEY);
+  localStorage.removeItem(RESULTS_KEY);
+  localStorage.removeItem(CURRENT_USER_KEY);
+};
